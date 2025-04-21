@@ -1,0 +1,11 @@
+So in this previous lecture we connected AWS Apprunner to our custom domain
+Now lets see if we want to add www i.e our sub domain to this
+So furst we need to go to our Link Custom DOamin in that currently we donot have any 
+for www so we would create it first so in "Hosted Zone " we need to create
+So after you hosted the server You will be able to find Name Servers
+Copy that Name Servers THis is because our www subdomain is not connected
+To our main hosted Zone So Now we need to create a Record for that
+"Now in Record Type" Selecte Name Server for hosted Zone and paste the names
+Now go to Aws App runned now in Domain registrar you will be able to find www
+And the crerate Domain although when you click on the link this still
+won't be working (although this will take time it will get by own only)
