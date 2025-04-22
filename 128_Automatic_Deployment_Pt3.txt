@@ -1,0 +1,15 @@
+-> So now for this we will need the Code Build so in Aws search for Code Build
+-> So in Aws go to code Build and then go to Create Project 
+-> Further we need to select the Source so our Source is Github
+-> Also we need to  enable Webhook event so this will basically so any change in code will redeploy it
+-> And in Filter Group we need to add "Push" this means whenever code is pushed the deployment will begin again
+-> Now in BuildSpec we will find a yaml file where all commands can be written
+-> Basically this should contain the the script that we wrote in deploy.sh 
+-> This should be kept under "pre_build" phase so there are three phases 
+1.pre_build
+2. Build
+3. post_build
+-> So after building this you will get a error regarding the authorization in that Case what
+we need to do is basically go to our Iam user and grant permission related to ec2 stuff
+-> So basically we need to add this policy -> 'AmazonEC2ContainerRegistryPowerUser'
+
