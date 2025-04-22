@@ -1,0 +1,22 @@
+# So over here we will give the node version we want to use and this  will be builder stage
+FROM node:20 AS builder
+# Now in this we would keep our working directory as app
+WORKDIR /app
+COPY . .
+#  Further we need to add the cmd to install the dependencies
+RUN npm install
+# Further we need to add the Run cmd to build
+RUN npm run build
+# Now Just to check if the build is successful we will add a cmd to list the files in the dist folder
+RUN ls dist
+
+-> So first of all we would add this to the the Docker file in our React Apprunner
+
+-> # So now  we would choose another Base Image and this stage will be runtime
+FROM nginx:alpine As runtime
+COPY --from=builder /app/dist /usr/share/nginx/html 
+
+-> So basically what we did was divided build and runtime first we build our image and then
+-> copied that image to our nginx server so that it get deployed also the nginx server used was based on alpine which is quite light so size of container got decreased
+
+ 
