@@ -1,0 +1,12 @@
+-> So now we would include health check in this
+-> So basically for health check 
+-> The command  should exit 0 if everything is okay 
+-> The command will exit with code 1 if some error occured
+
+# Adding Health Check if Status Code: 0 then it is healthy if 1 then unhealthy
+HEALTHCHECK CMD curl -f http://localhost: || exit 1
+
+# More Perfect health Check 
+HEALTHCHECK --interval=30s --timeout=30s --start-period=1s --start-interval=5s --retries=3 CMD curl -f http://localhost: || exit 1
+# So as soon as the container starts this will start and will wait for 5secs if any error and it will take 3  retries
+
