@@ -1,0 +1,3 @@
+-> So till now we had seen that we need to build the script and then further we need to run that script for auto deployment
+-> So Now we will try to automate that Process too
+-> So basically consider a scenario in the case where we will just Push our code to Guit hub repo and then ecr will take that changes send it to apprunner
