@@ -1,0 +1,10 @@
+-> The Linux Distribution : Alpine Linux
+This is basically a small linux Distribution 
+Often used as base image for many images
+Good alternative of Debian
+SO to start with we would run linux alpine on our sytem
+"docker run -it --rm alpine"
+-> Alpine is just 8mb which we can say that this is very lean linux distribution system
+-> Also in alpine other images like python this are also of lesser size
+"docker pull python:alpine" : This will pull python image based on alpine
+-> Hence we can say Using Alpine based linux the size of image are quite less hence which will help us to speed up the deployment
