@@ -1,0 +1,9 @@
+-> Multi Stage Build
+-> This will help us to have build Stage and an execution Stage
+-> We will create all executable files in temporary container   
+-> we then copy those into a smaller image
+-> This  image will then contain the components that are needed during execution(but no contianer)
+-> So for that in docker file we will have multiple from commands
+-> What is the primary benefit of using multi-stage builds in Docker?
+-> Reduced Image size by copying only the necessary files
+-> 
