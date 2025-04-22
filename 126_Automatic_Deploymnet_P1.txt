@@ -1,0 +1,22 @@
+So till Now basically what we have done is uploaded our imgae into ECR and that ECR is now connected
+to AWS Apprunner and hence any change in ECR image will affect and the automatic deployment will begin
+Now in this we will focus on writting the script in our Docker file in such a way that any change in code 
+will directly upload it to ECR and furthrt ad autmatic deployment is enabled so it will get automatically deployed
+-> So firste we need to make file called as deploy.sh in our folder
+-> Also that shell script shoiuld not be uploaded so we will add it to dockerignore
+-> Adding Belown code
+#!/usr/bin/env bash
+
+echo 'Starting Deployment...'
+
+Now in terminal We need to write : chmod +x deploy.sh //This will make my file executable
+
+And further we write ./deploy.sh then it will say Startimng deployment that menas out that script is up and runnning
+
+So now first add the Login "Push Command" in you shell script
+
+->> So further simply in step 2 add all the push commads in step 3 
+we will siply do cleanup in that docker image rm <Tag>
+
+
+So now we do ./deploy.sh then new code will get uploaded to ecr and further the deployment will begin
