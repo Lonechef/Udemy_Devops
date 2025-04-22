@@ -1,0 +1,5 @@
+-> The main reason behind this is that the standard "C" library is different
+-> musl and glibc
+-> glibc : Standard implementation on most Linux Systems
+-> musl : Small, modern implementation of the C standard library
+-> 
