@@ -1,0 +1,7 @@
+-> VPC stands for virtual Private Cloud
+-> Rsources such as EC2 within a VPC can directly commmunicayte to each other
+-> In simple terms this acts as we got an individual network just for our servers
+-> SO now simply Go to AWS and search for VPC and then select the region
+-> NOTE -> So basically in this the server that is our EC2 that we are running which is on particular private 
+Ip address our VPC of mumbbai region will also be running oin thatb Ip
+-> Basically the range of the IP address is same 
