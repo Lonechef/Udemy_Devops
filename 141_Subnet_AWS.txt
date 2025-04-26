@@ -1,0 +1,8 @@
+-> A segment of  the IP address range,in which we can place our servers
+-> A subnet can only span a single availability zone
+-> So in the VPC in aws we also have the section called as subnet
+-> So for now By default we have the three subnets on the basis of the zone
+-> So when we look for IP of subnet and VCP then the 172.31 acc to number this will always be fixed
+-> So in last there is 16 or 20 that basically defines the how many first didgit can be same
+-> So in last if it is 16 then in that case we can say that first 16  bits is same
+-> 
