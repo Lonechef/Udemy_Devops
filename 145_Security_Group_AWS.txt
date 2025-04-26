@@ -1,0 +1,13 @@
+-> So when we launch AWS resources at that time it asks us for security Groups
+-> Security Group is basically virtual firewall i.e. it controls inbound and outbound traffic to and from our AWS resources (such as EC2 instances)
+-> So basically this allows us to control which traffic is allowed to reach or exit our resources
+-> If we allow inbound traffic to an instance the response traffic is automatically allowed back out (regardless to ourbound rules)
+-> So to find out which inbound and outbound rules are applied to our instance then in that 
+-> Simply go to the EC2 instace and in that by selecting any instance we can find security groups and in that we can find which inbound and outbound rules are applied
+-> So now lets say now we want to add "exa,ple.com" to connect from our EC2 instance
+-> So basically what we will do is ping example.com from our current EC2 insatce so also 
+-> pind is the ourbound so we need to apply this to outbound rules as from my ec2 I do not want to eanble EC2 instance
+-> So for that we will simply delete that outbound rule and hence this will not allow to ping this example.com
+-> So in outbound rules in destination you can manage and add that which all Ip can be allowed to be hitted from your current EC2 instance
+-> So you can add cutom IP also so that from your instance just this would be allowed to be pinged
+-> 
