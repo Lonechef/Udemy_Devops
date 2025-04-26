@@ -1,0 +1,24 @@
+-> So in this first we will try to create VPC by going into VPC in aws
+-> So click on create Vpc this will be completely diff VPC 
+-> Here we will select VPC & more main reason this will help us to create subnet and all other wise we need to manually create them
+-> So in that we have an option to select the availability zone so basically in this which mean in what all zone our VPC will be available 
+-> Now anoter optoin is to create Public & Private Subnet
+->Public Subnet :
+-> Has a route to an Internet Gateway
+-> This allows resources EC2 to acess the internet
+-> PRIVATE sUBNET:
+-> Does not have direct acess to the Internet Gateway
+-> Resources are private 
+-> And further Click on Create VPC it will create the VPC now we need to create an EC2 instance 
+-> So we want to launch 2 EC2 instance so we will give name and select 2 instance and now main part is in Networking Section in select the VPN you created 
+-> So for now I will select the Project-vpc that we created and then will select the Subnet
+-> Now enable trhe Auto assign 
+-> Inbound security group I will selcte All traffic for now but this is not recommended for Production 
+-> Now create INstace in this way the instance will be created so basically now we have 2 instance runninbg on same VPC booth instannce have difeetent IP so Basically
+-> Now select any one of the instance so we can do it by ssh@IPV4 or select that Instane and above we have a connect option so we by using that we would connect thata
+-> So this will cli for us in aws itself 
+-> And now we will take the privateb Ipv4 for another instance and would try to ping it which is present in our VPC and hence it will get  connected 
+-> So basically as both our instace are present in single VPC so hence due to which from one instance to another ionstance we can connect by using another instance private Ip
+-> But if we try to connect the instance which is in diff VPC then we will not able to connect 
+-> Basically VPC becomes that area where servers present in that area can connect to eachother 
+-> 
