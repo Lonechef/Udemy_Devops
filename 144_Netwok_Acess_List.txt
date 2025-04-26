@@ -1,0 +1,7 @@
+-> Network Acess Control List
+-> This basically allows with Inbound and Outbounr rule which means which traffic can leave or enter the subnet
+-> Network ACL are stateless
+-> So for this we need to go to the Subnets and in that we have the Network ACL
+-> In that we have Inbound rule higher the rule means complete traffic is allowed 
+-> In that we can set both inbound and outbound traffic according to the requirement
+->  Simple terms Our Internet Gateway controls both Inbound and Outbound traffic so basically whatever traffic is incomig r Outgoig pass through this only lets say you are not allowing any traffic to go after it comes in then exit wont be allowed from that
