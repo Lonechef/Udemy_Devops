@@ -1,0 +1,8 @@
+-> So basically Internet Gateway is present in our VPC so any public traffic incoming will be routed through this InternetGateway and call will go to our EC2 Instance
+-> So first open the VPC Dashboard and then opene the my-project VPC that we made
+-> So when you select your vpc there you can find the Internet gateways option 
+-> That gateway will be by default attached to our VPC Id
+-> The one thing to note down is that the Instance should be having a public Ip then and only then it is aceesible by public Ip
+-> Hence Internet Gateway just does not means we can directly access the internet we need to have a EC2 instance with Public Ip address
+-> In Subnet after selecting any subnet we will be  able to find out a Internet Gateway attached to it so we can access by that also
+-> 
