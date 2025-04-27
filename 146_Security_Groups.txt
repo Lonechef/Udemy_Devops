@@ -1,0 +1,21 @@
+To allow one AWS EC2 instance to connect to another, you need to configure the security group of the target instance. Here are the steps:
+
+1. **Allow SSH Access**:
+    Add an inbound rule to the security group of the target instance to allow SSH access. The source can be the IP address or range of the instance that will connect.
+
+    Example:
+    - Type: SSH
+    - Protocol: TCP
+    - Port Range: 22
+    - Source: Custom (e.g., the IP address or range of the source instance)
+
+2. **Allow Access from the Same Security Group**:
+    Add another inbound rule to allow access from instances that belong to the same security group. This is useful when both instances are in the same group.
+
+    Example:
+    - Type: All Traffic (or specific protocol/port as needed)
+    - Protocol: All (or specific protocol)
+    - Port Range: All (or specific port)
+    - Source: Security Group ID (select the same security group)
+
+By doing this, the source instance will be able to connect to the target instance using SSH or other protocols as defined in the rules.
