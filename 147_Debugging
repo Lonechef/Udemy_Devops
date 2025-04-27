@@ -1,0 +1,11 @@
+1. Ensure that both instances are in the same Virtual Private Cloud (VPC) to allow communication between them.
+
+2. Verify that the VPC and route table are configured properly to route traffic between the instances.
+
+3. Confirm that the Network Access Control List (ACL) allows the necessary inbound and outbound traffic for the connection.
+
+4. To check if the instances are in the same VPC, select both instances and verify that they have the same VPC ID in their configuration details.
+
+5. Check the route table associated with the subnet of the instance to ensure that the destination IP range includes the instance's IP address.
+
+6. Check the security groups associated with each instance. Click on the EC2 instance, navigate to the "Security" tab, and verify that the security group rules allow the necessary inbound and outbound traffic for communication.
