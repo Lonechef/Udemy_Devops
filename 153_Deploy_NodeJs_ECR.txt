@@ -1,0 +1,27 @@
+-> So for that first we take the repo from our Github and we build image via CodeBuild
+-> So for that we need to create ECR
+-> So now for that we first need to prepare a Dcoker File 
+-> So after that first we need to go to the "code build"
+-> And from that we can add our Repo Link for Code build
+-> And Further in Build Spec we can add the commands to build the file we can do it over here only
+-> And for that we need to  go to the ECR and in that we can add the Push commands
+-> Basically that will be our Build commands
+
+The error occurs due to the following reasons:
+
+1. **AccessDeniedException**: This indicates that the IAM role or user does not have the required permissions to perform the requested action.
+
+2. **GetAuthorizationToken operation**: The action `ecr:GetAuthorizationToken` is used to retrieve an authorization token to authenticate Docker CLI or other tools with Amazon Elastic Container Registry (ECR).
+
+3. **IAM Role**: The role `codebuild-Trivia-Build-Backend-service-role` is being used by AWS CodeBuild to execute the build process.
+
+4. **Missing Permissions**: The error specifies that the role does not have the necessary permissions to perform the `ecr:GetAuthorizationToken` action. This is because no identity-based policy (IAM policy) attached to the role allows this action.
+
+5. **Solution**: To resolve this, you need to attach a policy to the IAM role that grants the `ecr:GetAuthorizationToken` permission. For example, you can attach the `AmazonEC2ContainerRegistryReadOnly` or `AmazonEC2ContainerRegistryPowerUser` managed policy, or create a custom policy with the required permissions.
+
+6. **Resource**: The error mentions `resource: *`, which means the action is being attempted on all ECR resources. Ensure the policy allows access to the specific ECR resources you are working with, if needed.
+
+Steps to fix:
+- Go to the IAM console.
+- Find the `codebuild-Trivia-Build-Backend-service-role`.
+- Attach the appropriate policy that includes `ecr:GetAuthorizationToken`.
