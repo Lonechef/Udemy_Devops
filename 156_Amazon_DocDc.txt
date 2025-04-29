@@ -1,0 +1,24 @@
+-> So first we need to go to our DocDb and in that we need to look foe TLA Enabled for TriviaDb cluster
+-> Now here we have to connect to Trivia Db cluster and click on that we will get some connection strings
+-> So in the commads we first need to download the certificate so when you are build stage in docker file we need to add that dowqnload cerificate links
+-> "RUN wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem"
+-> Adding above in the Docker file this will help to download the certificate during Build
+-> Now in sercver.ts we need to add  tlsCAFile: (process.env.NODE_ENV == 'production' ? 'global-bundle.pem': undefined)});
+-> Now simply to check we do docker build .  Here the "." means build the current folder
+->  Now still this will not work because our AmazonDoc Db is running on seperate VPC
+->  Henced now we need to deploy our application in that VPC only so it can connect to DB
+-> So for this we simply need to add the configuration in AWS App runner in the env 
+-> So in env basically in apprunner we will add the env and in that 
+we need to add key as MONGODB_URI and for that we need to add this link mongodb://Jarvis:<insertYourPassword>@triviadb.cluster-chigwk6i0zi8.ap-south-1.docdb.amazonaws.com:27017/?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
+
+-> Below are my enviorment props
+Environment variables
+Source: Plain text
+Name: NODE_ENV
+Value: production
+Source: Plain text
+Name: MONGODB_URI
+Value: mongodb://Jarvis:jarvis129284263@triviadb.cluster-chigwk6i0zi8.ap-south-1.docdb.amazonaws.com:27017/trivia?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
+
+-> Now another thing is in appruinner only we need to go to the Networking and there we can add vpc basically on whihc vpc I want to connect it 
+->  So in Networking we need to add Custom Vpc and by adding that i will work perfectly
