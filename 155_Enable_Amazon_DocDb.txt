@@ -1,0 +1,8 @@
+-> So in our application as we are using the DB and we have not given it in Env so this will not working
+-> Hence for this we will be using Amazon Document DB for this
+-> Amazon DocumentDB is a fully managed NoSQL document database service designed for JSON workloads. It is highly scalable, secure, and compatible with MongoDB, making it easy to migrate and build applications. With Amazon DocumentDB, you can focus on application development without worrying about database management tasks.
+-> So now first of all we will go to the Amazon Document db and make amazon db cluster
+-> And further selecting the free instance
+-> Numnber of instace we will go for 1 because the price would be Number of Instance X Price per Instance
+-> And Just further create it and then click on trivia db we will get further connection links for that
+-> 
