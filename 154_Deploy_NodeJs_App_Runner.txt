@@ -1,0 +1,6 @@
+-> So in previous lecture we saw firt using codebuild we pushed the repo and the then using push commands from ECR we build it and now we need to deploy this using apprunner
+-> So go to the Apprunner and in that go to the Create Service 
+-> And in Container Image URI we need to place the image that is stored in our ecr
+-> Now here we need to add the enviorment variables now this can be done by clicking on Runtime enviorment variables
+-> Now this will fail deploying as we are using DB but in env we still have not mentioned any DB uri 
+-> 
