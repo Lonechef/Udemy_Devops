@@ -1,0 +1,6 @@
+-> On Linux this is not much preferred for linux best way is to do by using S3
+-> So simply after installing cyberduck it will ask to enter the Aws acess key and Secrea acess key
+-> SO further we simply need to do npm run build which will create a dist folder
+-> And further we just need to upload that dist folder to the S3
+-> But the main drawback is we need to do this process everytime we change the code and that not much feadible
+-> 

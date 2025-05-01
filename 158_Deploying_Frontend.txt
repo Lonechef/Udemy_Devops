@@ -1,0 +1,12 @@
+-> We can serve our frontend on App runner also but frontend does not contain any code that needs to be executed
+-> Its just a bunch of files that need to be made available
+-> So serving on apprunner is quite costly
+-> There are several cheaper options also available 
+-> we compile the frontend into static files 
+-> Which we then store on s3
+-> And serve through a cloudFront cloudFront
+-> So now for that first of all we will create a S3 Bucket
+-> So in create Bucket there is an option to block public access so for now we will block the public access
+-> So after creating a bucket we have an option to upload the files in that 
+-> SO now thre are aseveral ways to upload files one is Using Cyberdunk we could simply drag and drop the files another is via codebuild
+-> 
