@@ -1,0 +1,14 @@
+=> So basically our backend is deployed via Apprunner
+-> And Frontend is deployed via CDF
+-> So basically now what we will do is basically all the end points having "/api"
+-> Should be served by Apprunner where basically our Node Js has been deployed
+-> So for this first we need to go to cdf in that we have a origin so we need to 
+create new origin and in that we need to give the link of apprunner where our backend
+has been deployed
+-> So further we need to go to behavivour and Create behaviour in that we nothing need to do
+-> Simply we need to mentionn  the path for our case it is /api/* basically this means 
+any path having api will be directed to aws apprunner and further we can mention which HTTP
+Method can be allowed 
+-> ANother policy we need to mentiuon is "AllViewExceptHostHeader"
+-> This menas when we call from frontend to backedn we want all the headers to pass except host headers
+-> 
