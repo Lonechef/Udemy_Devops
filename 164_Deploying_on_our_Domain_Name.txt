@@ -1,0 +1,2 @@
+-> So basically now over here we want to set our Domain name uin sucha way that our deployed frontend and backend runs on that
+-> First we donor need few hosted zones so deleting those
