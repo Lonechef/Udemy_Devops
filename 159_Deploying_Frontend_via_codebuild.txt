@@ -1,0 +1,28 @@
+-> So first we need to go to codebuild and create a repository
+-> So asusual add the git repo link and further in additional info we need to add the Enviorment variables
+-> NODE_ENV key we will put the value as production
+-> Further we need to add the build spec
+-> Just we need to add below command
+->  version: 0.2
+
+phases:
+  build:
+    commands:
+      - npm install
+      - npm run build
+    artifacts:
+        files:
+            - dist/*
+            - dist/**/*
+Why You Need Both Patterns:
+dist/* ensures that files directly in the dist directory are included.
+dist/**/* ensures that files in any subdirectories of dist are also included.
+Together, these patterns ensure that all files in the dist directory and its subdirectories are captured as artifacts.
+Use Case:
+If you're deploying a frontend application, the dist directory typically contains the build output (e.g., HTML, CSS, JavaScript, images). Including all files ensures that your deployment process has everything it needs to serve the application.
+
+
+-> Now further we need to select Artifact 1 and in that we need to mention S3
+-> And there we need to give the bucket name
+-> So now when we start building it will run the script so basically during this as we had mention npm install it willm only take dependecies but it should also tajke dev-dependecies so for that we need to mention that in our script files
+-> 
