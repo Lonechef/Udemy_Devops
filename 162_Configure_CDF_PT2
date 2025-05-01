@@ -1,0 +1,7 @@
+-> So now after deploying this is working but there is small issue in this basically
+-> when we directly press on the link of Cloudfront this will not work instead
+-> we need to mention index.html file in th url
+-> So now we will improve this so that without mentioning explicitly in url by default it always opens index.html
+-> So for this we simply need to got to settings of Cloudfront and in that we have option
+-> Default root object : There we need to simply mention index.html
+-> Also for further modifications in Cloudfront we can mention the Error pages so in that inn case some other endpoint that is not in your project is tried to hit then what to show can be managed by Error Page
