@@ -1,0 +1,10 @@
+- Websites can be hosted directly using S3 by enabling the "Static Website Hosting" option in the bucket's properties.
+- Instead of using S3 directly, CloudFront will be used for this purpose.
+- CloudFront is a Content Delivery Network (CDN) service provided by AWS.
+- It delivers content with low latency and high transfer speeds by caching copies of content at edge locations globally.
+- This improves the performance and availability of websites or applications for users worldwide.
+-> So search for cloudfront in the aws and in that "Create Distribution"
+-> FIRST WE need to add Origin domain in that we need to add the s3 bucket over here which is having our frontend files
+-> After that we need to mention path where our dist folder is 
+/Trivia-Frontend/dist
+-> 
