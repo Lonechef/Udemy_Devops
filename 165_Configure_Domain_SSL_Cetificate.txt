@@ -1,0 +1,9 @@
+-> So first go to CLoudfront and in that there is an option saying alternate Domain names
+-> So in that basically we need to go and enter the domain names on which our cdf will be served
+-> To serve for htttps we need to mention the SSL Certificate
+-> So threre will be an option to request for certiuficate so we need to do that
+-> After creating the records in Route 53, make sure to point your domain name to the CloudFront distribution.
+-> Go to Route 53 and create an "A" record (Alias) for your domain name.
+-> In the "Alias Target" field, select the CloudFront distribution.
+-> Save the record and wait for DNS propagation.
+-> Once the DNS propagation is complete, your domain name will serve the site hosted on CloudFront.
