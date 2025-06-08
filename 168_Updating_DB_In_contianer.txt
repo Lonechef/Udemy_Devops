@@ -1,0 +1,10 @@
+-> So basically iin this course we will i understand how we could update the DataBase in the deployed container
+-> So basically it is not good to update the Database directly it should be avoided
+-> So what we do is basically never update the docker instead we create a new container and 
+-> THrow away the old container
+-> There are two main reasons why updating the container is not preferable:
+    1. Containers are meant to be immutable. Updating them directly (e.g., using `apt update` or `apt upgrade`) goes against the principle of immutability and can lead to inconsistencies.
+    2. Updating a container directly makes it harder to reproduce the same environment, as the changes are not reflected in the Docker image. This can lead to issues in deployment and debugging.
+-> Additionally, updating a container directly can increase its size unnecessarily. Each update adds new layers to the container, which can lead to bloated images and inefficient storage usage. By creating a new image and container, you ensure that the size remains optimized and manageable.
+hence due to which our continers are no more light weight
+=-> But just cratig a new continer we can face an issue of loss of Data basically whihc was present in the old continaer
