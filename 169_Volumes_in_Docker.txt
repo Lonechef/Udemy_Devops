@@ -1,0 +1,17 @@
+-> Volumes in Docker
+-> So as seen previosuly we donot update the Docker COntainer instead we update it 
+-> But issue is with the data like creatuing a new continer but what about data inside the continer
+-> What is a volume?
+-> Its a mechanism for mapping container data to a (hidden) directory on the host
+-> So basically lets say opur system or host is of linux then basically the data inside the conatainer is linked to the hiddebn folder inn the host
+-> On Linux the volumes are usually stored under:
+/var/lib/docker/volumes 
+-> Also we should never acess them directly instead we should access them with docker volumen only
+-> To create a new volume we simply do
+-> "docker volume create nginx-vol"
+-> Ro see the docker volume we do : docker volume ls`
+-> To inspect we use  "docker volume inspect ngix-vol"
+-> To remove the volume we do " dcker volume rs ngix-vol "
+-> Its is not possible to create a volume if we want to do that then we need to create a new volume and then copy all files into it
+-> To delete all the unused volumes we do " docker volume prune"
+
