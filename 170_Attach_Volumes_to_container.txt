@@ -1,0 +1,29 @@
+-> So for this just as with the bind mounts we can use --mount to connect a volume
+-> -- mount  type= volume, source=[volume-name], destination=[continer-path]
+-> SOURCE IS THE NAME OF THE volume that we want to linked-
+-> Destination : THe path to the directory in the container we want to connect the volume to
+-> " docker run -it -p 8080:80 --mount type=volume,source=nginx-vol,destination=/usr/share/nginx/html nginx "
+So now basically open abnothr tab
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                  NAMES
+a084e34f00d4   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp   hardcore_blackwell
+saumyaparikh@atpl-saumya:~$ docker container exec -it a084e34f00d4 bash
+root@a084e34f00d4:/# cd /usr/share/ngix/html/
+bash: cd: /usr/share/ngix/html/: No such file or directory
+root@a084e34f00d4:/# ls
+bin   docker-entrypoint.d   home   media  proc	sbin  tmp
+boot  docker-entrypoint.sh  lib    mnt	  root	srv   usr
+dev   etc		    lib64  opt	  run	sys   var
+root@a084e34f00d4:/# cd /usr/share/nginx/html/
+root@a084e34f00d4:/usr/share/nginx/html# ls
+50x.html  index.html
+root@a084e34f00d4:/usr/share/nginx/html# 
+
+
+-> So baasically we installed an image of nginx and the files index.html is present i this pasth i.e. usr and all 
+hence what we did is simplyt in [particular volume we stored this file so further direcytly changing  things in the volume we can see the chnages when we run the container
+
+->  Another command is there to do this
+-v[volume name] : [directory in the container]
+ -> Hence for this it will be
+ "docker run -it -p 8080:80 -v nginx-vol:/usr/share/nginx/html nginx"
+ -> So basically volume name : nginx-vol and if it already do not exists it will make a new Once
